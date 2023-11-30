@@ -10,12 +10,12 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            bool isGuess = false;
+            //bool isGuess = false;
             Console.WriteLine("        Welcome to the Guessing Game     ");
             Console.WriteLine("...................................");
 
             Random random = new Random();
-            int randomNum = random.Next(1, 10);
+            int randomNum = random.Next(1, 20);
             int i = 0;
         
             while(i < 5)
