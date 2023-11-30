@@ -16,8 +16,9 @@ namespace ConsoleApp2
 
             Random random = new Random();
             int randomNum = random.Next(1, 10);
+            int i = 0;
         
-            while(!isGuess)
+            while(i < 5)
             {
 
                 Console.WriteLine("Enter your guessed number.");
@@ -33,7 +34,13 @@ namespace ConsoleApp2
                 else
                 {
                     Console.WriteLine("B.I.N.G.O You Won the Game !!!");
-                    isGuess = true;
+                    break;
+                }
+                i++;
+
+                if(i == 5) 
+                {
+                    Console.WriteLine("Sorry You Lost the Game");
                 }
             }
 
