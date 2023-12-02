@@ -40,7 +40,9 @@ namespace ConsoleApp2
                     }
 
                     Console.WriteLine("Enter the index of the item you wished to delete . ");
-                    int num = Convert.ToInt32(Console.ReadLine());
+                    string snum = Console.ReadLine();
+                    int num = 0;
+                    int.TryParse(snum,out num);
                     todoList.RemoveAt(num);
 
                 }
@@ -49,13 +51,14 @@ namespace ConsoleApp2
                 {
                     if (!todoList.Any())
                     {
-                        Console.WriteLine("The list is Empty,Please Press 1 to add item");
+                        Console.WriteLine("The list is Empty,Please Press 1 to add item .");
                     }
                     else
                     {
+                        Console.WriteLine("The Items in the list are  ");
                         for (int i = 0; i < todoList.Count; i++)
                         {
-                            Console.WriteLine(todoList[i]);
+                            Console.WriteLine(i +" : "+ todoList[i]);
                         }
                     }
                     
